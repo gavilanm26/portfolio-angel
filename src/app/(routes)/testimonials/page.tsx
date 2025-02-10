@@ -9,12 +9,13 @@ import { dataTestimonials } from '../../data';
 import CircleImage from '../../components/circle-image';
 import TransitionPage from '../../components/transition-page';
 import {CoverParticles} from "@/app/components/cover-particles";
+import ContactForm from "@/app/components/contact";
 
 const TestimonialsPage = () => {
     return (
         <>
             <TransitionPage />
-            <div className='flex flex-col justify-center h-lvh'>
+            <div className='flex flex-col justify-center h-lvh mt-[80px] sm:mt-0'>
                 <CircleImage />
                 <h1 className="text-2xl leading-tight text-center md:text-4xl md:mb-5">
                     Algunos comentarios
@@ -50,10 +51,15 @@ const TestimonialsPage = () => {
                                 </SwiperSlide>
                             ))}
                         </Swiper>
+                        <div className="mt-[-10px] sm:mt-0">
+                            <ContactForm />
+                        </div>
                     </div>
                 </div>
             </div>
-            <CoverParticles />
+            <div className="absolute inset-0 -z-10">
+                <CoverParticles />
+            </div>
         </>
     );
 }

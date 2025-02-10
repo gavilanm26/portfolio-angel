@@ -25,12 +25,13 @@ const ServicesPage = () => {
                     </p>
 
 
-                    <div className="text-center md:text-left mt-[40px] sm:mt-0 flex justify-center">
+                    <div className="text-center md:text-left mt-[40px] sm:mt-0 flex justify-center gap-4">
+                        {/* Botón de WhatsApp */}
                         <a
                             href="https://wa.me/573214550322?text=Hola, estoy interesado en tus servicios. ¿Podemos hablar?"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-2 px-4 py-2 text-white text-sm sm:text-base font-medium bg-secondary hover:bg-secondary/80 rounded-lg shadow-md transition-all"
+                            className="flex items-center gap-2 px-4 py-2 text-white text-sm sm:text-base font-medium bg-secondary hover:bg-secondary/80 rounded-lg shadow-md transition-all whitespace-nowrap"
                         >
                             <Image
                                 src="/assets/images/icons/whatsapp.png"
@@ -38,7 +39,22 @@ const ServicesPage = () => {
                                 width={24}
                                 height={24}
                             />
-                            <span>Contacta conmigo</span>
+                            <span className="whitespace-nowrap">Contacta conmigo</span>
+                        </a>
+
+                        {/* Botón de Descargar PDF */}
+                        <a
+                            href="/assets/PDF/Soluciones_Tecnologicas_GAVILANGel.pdf"
+                            download="Soluciones_Tecnologicas_GAVILANGel.pdf"
+                            className="flex items-center gap-2 px-4 py-2 text-white text-sm sm:text-base font-medium bg-blue-600 hover:bg-blue-500 rounded-lg shadow-md transition-all whitespace-nowrap"
+                        >
+                            <Image
+                                src="/assets/images/icons/pdfIcon.png"
+                                alt="PDF"
+                                width={24}
+                                height={24}
+                            />
+                            <span className="whitespace-nowrap">Descargar Portafilo</span>
                         </a>
                     </div>
 

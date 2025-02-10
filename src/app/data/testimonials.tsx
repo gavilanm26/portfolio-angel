@@ -22,7 +22,7 @@ export const dataTestimonials: TestimonialData[] = [
         id: 3,
         name: "Rick Pérez",
         description: "Ángel instaló un sistema de citofonía digital en nuestro edificio residencial. Todo quedó perfectamente configurado y el mantenimiento ha sido excelente. Un servicio de calidad.",
-        imageUrl: "/assets/images/profiles/espia.jpeg",
+        imageUrl: "/assets/images/profiles/rick.png",
     },
     {
         id: 4,
