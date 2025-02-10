@@ -16,8 +16,14 @@ const TestimonialsPage = () => {
         <>
             <TransitionPage />
             <div className='flex flex-col justify-center h-lvh mt-[80px] sm:mt-0'>
+                <ContactForm />
+                {/* Separador entre Contacto y Testimonios */}
+                <div className="flex justify-center items-center my-6">
+                    <div className="w-2/3 border-t-2 border-secondary"></div>
+                </div>
+
                 <CircleImage />
-                <h1 className="text-2xl leading-tight text-center md:text-4xl md:mb-5">
+                <h1 className="text-2xl leading-tight text-center md:text-4xl md:mb-5 mt-[-10px] sm:mt-0">
                     Algunos comentarios
                     <span className="block font-bold text-secondary"> de nuestros clientes</span>
                 </h1>
@@ -51,9 +57,6 @@ const TestimonialsPage = () => {
                                 </SwiperSlide>
                             ))}
                         </Swiper>
-                        <div className="mt-[-10px] sm:mt-0">
-                            <ContactForm />
-                        </div>
                     </div>
                 </div>
             </div>
