@@ -52,7 +52,7 @@ const ServicesPage = () => {
                                 width={24}
                                 height={24}
                             />
-                            <span className="whitespace-nowrap">Descargar Portafilo</span>
+                            <span className="whitespace-nowrap">Descargar Portafolio</span>
                         </a>
                     </div>
 
