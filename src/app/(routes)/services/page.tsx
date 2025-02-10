@@ -26,7 +26,6 @@ const ServicesPage = () => {
 
 
                     <div className="text-center md:text-left mt-[40px] sm:mt-0 flex justify-center gap-4">
-                        {/* Botón de WhatsApp */}
                         <a
                             href="https://wa.me/573214550322?text=Hola, estoy interesado en tus servicios. ¿Podemos hablar?"
                             target="_blank"
@@ -42,7 +41,6 @@ const ServicesPage = () => {
                             <span className="whitespace-nowrap">Contacta conmigo</span>
                         </a>
 
-                        {/* Botón de Descargar PDF */}
                         <a
                             href="/assets/PDF/Soluciones_Tecnologicas_GAVILANGel.pdf"
                             download="Soluciones_Tecnologicas_GAVILANGel.pdf"
