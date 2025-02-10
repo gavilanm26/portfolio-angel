@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import Modal from "@/app/components/modal";
+import { useState } from "react";
+
 
 interface PortfolioBoxProps {
     data: {
@@ -9,12 +11,14 @@ interface PortfolioBoxProps {
         title: string;
         image: string;
         urlDemo: string;
+        description?: string;
     };
 }
 
 const PortfolioBox = (props: PortfolioBoxProps) => {
     const { data } = props;
-    const { id, title, image, urlDemo } = data;
+    const { id, title, image, urlDemo, description } = data;
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
         <div
@@ -35,15 +39,23 @@ const PortfolioBox = (props: PortfolioBoxProps) => {
             </div>
 
             <div className="flex justify-center mt-auto">
-                <Link
-                    href={urlDemo}
-                    target="_blank"
+                <button
                     className="px-4 py-2 transition duration-150 rounded-lg bg-secondary hover:bg-secondary/80 text-white"
-                    onClick={(event) => event.preventDefault()}
+                    onClick={() => setIsModalOpen(true)}
                 >
                     Ver detalles
-                </Link>
+                </button>
             </div>
+
+            <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} title={title}>
+                <p>{description}</p>
+                <a
+                    href={urlDemo}
+                    target="_blank"
+                    className="block text-blue-500 underline mt-2"
+                >
+                </a>
+            </Modal>
         </div>
     );
 };
