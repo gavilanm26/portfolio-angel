@@ -1,7 +1,7 @@
 "use client"
 
 import Image from 'next/image';
-import { Pagination } from 'swiper/modules';
+import {Autoplay, Pagination} from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 
@@ -33,7 +33,11 @@ const TestimonialsPage = () => {
                             pagination={{
                                 clickable: true
                             }}
-                            modules={[Pagination]}
+                            autoplay={{
+                                delay: 3000,
+                                disableOnInteraction: false,
+                            }}
+                            modules={[Pagination, Autoplay]}
                             className="h-[380px] md:h-[300px] w-[270px] md:w-[550px] mt-[20px] sm:mt-0"
                         >
                             {dataTestimonials.map(({ id, name, description, imageUrl }) => (

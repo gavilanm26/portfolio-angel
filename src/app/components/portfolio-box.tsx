@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -21,7 +23,7 @@ const PortfolioBox = (props: PortfolioBoxProps) => {
         >
             <div>
                 <h3 className="mb-4 text-xl text-center">{title}</h3>
-                <div className="w-full h-[200px] overflow-hidden rounded-2xl">
+                <div className="w-full h-[260px] overflow-hidden rounded-2xl">
                     <Image
                         src={image}
                         alt={title}
@@ -37,8 +39,9 @@ const PortfolioBox = (props: PortfolioBoxProps) => {
                     href={urlDemo}
                     target="_blank"
                     className="px-4 py-2 transition duration-150 rounded-lg bg-secondary hover:bg-secondary/80 text-white"
+                    onClick={(event) => event.preventDefault()}
                 >
-                    Live demo
+                    Ver detalles
                 </Link>
             </div>
         </div>

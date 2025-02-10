@@ -3,6 +3,7 @@ import CircleImage from "../../components/circle-image";
 import SliderServices from "../../components/slider-services";
 import TransitionPage from "../../components/transition-page";
 import {CoverParticles} from "@/app/components/cover-particles";
+import Image from "next/image";
 
 const ServicesPage = () => {
     return (
@@ -24,18 +25,32 @@ const ServicesPage = () => {
                     </p>
 
 
-                    <div className="text-center md:text-left mt-[40px] sm:mt-0">
-                        <button className="px-3 py-2 rounded-lg bg-secondary hover:bg-secondary/65">
-                            Contacta conmigo
-                        </button>
+                    <div className="text-center md:text-left mt-[40px] sm:mt-0 flex justify-center">
+                        <a
+                            href="https://wa.me/573214550322?text=Hola, estoy interesado en tus servicios. ¿Podemos hablar?"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 px-4 py-2 text-white text-sm sm:text-base font-medium bg-secondary hover:bg-secondary/80 rounded-lg shadow-md transition-all"
+                        >
+                            <Image
+                                src="/assets/images/icons/whatsapp.png"
+                                alt="WhatsApp"
+                                width={24}
+                                height={24}
+                            />
+                            <span>Contacta conmigo</span>
+                        </a>
                     </div>
+
                 </div>
 
                 <div className="mt-[1px] sm:mt-0">
                     <SliderServices />
                 </div>
             </div>
-            <CoverParticles />
+            <div className="absolute inset-0 -z-10">
+                <CoverParticles />
+            </div>
         </>
     );
 };
